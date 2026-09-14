@@ -25,6 +25,7 @@ services:
     image: caddy:2
     environment:
       MOTEL_DOMAIN: "${MOTEL_DOMAIN:?Set MOTEL_DOMAIN in .env}"
+      PORTFOLIO_DOMAIN: "${PORTFOLIO_DOMAIN:?Set PORTFOLIO_DOMAIN in .env}"
     ports:
       - "80:80"
       - "443:443"

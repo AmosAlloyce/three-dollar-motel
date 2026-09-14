@@ -9,3 +9,7 @@
 		}
 	}
 }
+
+{$PORTFOLIO_DOMAIN} {
+	reverse_proxy portfolio-web:3000
+}
