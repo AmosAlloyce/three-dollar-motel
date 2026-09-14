@@ -1,0 +1,43 @@
+name: three-dollar-motel
+
+services:
+  motel:
+    build:
+      context: ..
+    env_file:
+      - ../.env
+    environment:
+      HOST: 0.0.0.0
+      PORT: "3000"
+      PUBLIC_ORIGIN: "https://${MOTEL_DOMAIN:?Set MOTEL_DOMAIN in .env}"
+      ADMIN_KEY: "${ADMIN_KEY:?Set a random ADMIN_KEY in .env}"
+      BAN_BY_IP: "false"
+      MOTEL_DATA_DIR: /app/data
+    volumes:
+      - motel_data:/app/data
+    restart: unless-stopped
+    read_only: true
+    security_opt:
+      - no-new-privileges:true
+    # Port 3000 stays on Docker's private network; only Caddy publishes ports.
+
+  caddy:
+    image: caddy:2
+    environment:
+      MOTEL_DOMAIN: "${MOTEL_DOMAIN:?Set MOTEL_DOMAIN in .env}"
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+      - caddy_config:/config
+    depends_on:
+      motel:
+        condition: service_healthy
+    restart: unless-stopped
+
+volumes:
+  motel_data:
+  caddy_data:
+  caddy_config:

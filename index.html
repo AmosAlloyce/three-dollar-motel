@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#132729">
+  <meta name="description" content="Check into the Three Dollar Motel. A little virtual hotel with a shared lounge, pool and live community chat.">
+  <title>Three Dollar Motel — The courtyard</title><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/styles.css?v=room003-20260913"><script type="module" src="/app.js?v=room003-20260913"></script>
+</head>
+<body>
+  <a class="skip-link" href="#hotel-canvas">Skip to the hotel</a>
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="Hotel navigation">
+      <a class="brand" href="/" aria-label="Three Dollar Motel home"><span class="brand-icon">$3<span>✳</span></span><span class="brand-name">THREE DOLLAR<br><strong>MOTEL</strong></span></a>
+      <button class="nav-item active" id="courtyard-nav" type="button"><span aria-hidden="true">⌂</span> The courtyard <i class="nav-dot"></i></button>
+      <button class="nav-item" id="coin-nav" type="button"><span aria-hidden="true">◈</span> The coin <span class="tag" id="coin-nav-tag">SOON</span></button>
+      <button class="nav-item" id="help-nav" type="button"><span aria-hidden="true">☷</span> House rules</button>
+      <div class="sidebar-bottom"><button class="text-button host-entry" type="button">Host controls ↗</button></div>
+    </aside>
+    <div class="main-shell">
+      <header class="topbar"><div class="breadcrumbs">YOUR INTERNET GETAWAY <span>/</span> <strong>LOUNGE & POOL</strong></div><div class="topbar-actions"><span class="connection-pill" id="connection-pill"><i></i><span id="connection-label">Not checked in</span></span><button id="coin-top" class="outline-button" type="button">The coin <span>↗</span></button></div></header>
+      <main>
+        <section class="page-heading hero" aria-labelledby="hero-title">
+          <div class="hero-copy">
+            <div class="eyebrow">A SMALL PLACE FOR INTERNET PEOPLE</div>
+            <h1 id="hero-title">Big memes.<br><em>Tiny motel.</em></h1>
+            <p>Leave the feed behind. Solve a little mystery, meet a stranger, and light up the pool together.</p>
+            <div class="hero-actions"><button id="hero-checkin" class="primary-button" type="button">Check in for free <span>↗</span></button><button id="hero-mystery" class="outline-button" type="button">Investigate Room 003 ↓</button></div>
+            <span class="hero-footnote">Free entry · No wallet needed · Always pool weather</span>
+          </div>
+          <div class="hero-art">
+            <img class="neon-sign" src="/motel-sign.png" alt="A glowing vintage three dollar motel sign" width="1254" height="1254" fetchpriority="high">
+            <div class="occupancy"><span class="occupancy-icon" aria-hidden="true">♧</span><div><strong id="guest-count">—</strong><span id="guest-count-label">guests checked in</span></div></div>
+          </div>
+        </section>
+        <section class="mystery-card" aria-labelledby="mystery-title">
+          <div class="mystery-header">
+            <div class="mystery-key" aria-hidden="true"><span>ROOM</span><strong>003</strong><span>DO NOT DISTURB?</span></div>
+            <div class="mystery-intro"><span class="eyebrow">YOUR FIRST MOTEL MYSTERY · FREE TO PLAY</span><h2 id="mystery-title" tabindex="-1">What’s behind Room 003?</h2><p>Reception has a locked door and three very odd clues. Follow the trail, crack Room 003, and earn your first passport stamp.</p></div>
+            <span class="mystery-progress" id="mystery-progress">0 / 3 clues found</span>
+          </div>
+          <div class="mystery-body">
+            <div class="mystery-investigation">
+              <p class="mystery-instructions">Choose a clue below. Your guest will walk over and inspect it automatically.</p>
+              <ol class="mystery-clues" id="mystery-clues" aria-label="Room 003 clues"></ol>
+              <form class="mystery-solve-form" id="mystery-solve-form">
+                <label for="mystery-code">Room 003 door code</label>
+                <div class="mystery-code-row"><input id="mystery-code" name="code" type="text" inputmode="numeric" pattern="[0-9]{3}" minlength="3" maxlength="3" placeholder="•••" autocomplete="off" aria-describedby="mystery-code-hint" required disabled><button class="small-button" id="mystery-solve" type="submit" disabled>Unlock Room 003 ↗</button></div>
+                <p id="mystery-code-hint" class="mystery-hint">Check in for free to start the mystery.</p>
+              </form>
+              <p class="mystery-complete" id="mystery-complete" hidden>Case closed. Someone left you the switch to the pool lights. Time to celebrate?</p>
+              <p class="mystery-status" id="mystery-status" role="status" aria-live="polite"></p>
+            </div>
+            <aside class="passport-card" aria-label="Your motel passport">
+              <span class="eyebrow">YOUR MOTEL PASSPORT</span>
+              <div class="passport-stamp" id="passport-stamp"><span class="passport-stamp-icon" id="passport-stamp-icon" aria-hidden="true">003</span><strong id="passport-stamp-title">Your first passport stamp</strong><span id="passport-stamp-copy">Solve Room 003 to make your mark.</span></div>
+              <div class="passport-balance"><strong id="passport-credits">0</strong><span>demo credits</span></div>
+              <button id="party-button" class="primary-button" type="button">Start pool party · 3 demo credits</button>
+              <p id="party-note" class="passport-note">Solve the mystery to earn 3 demo credits. Spend them on a 60-second pool party for everyone.</p>
+              <p class="passport-fine-print">Just for play: demo credits have no monetary value, cash-out or token conversion. Your clues and stamp are saved for this browser. Clearing cookies loses access.</p>
+            </aside>
+          </div>
+        </section>
+        <div class="section-heading"><div><span class="eyebrow">MAKE YOURSELF AT HOME</span><h2>The courtyard<span>.</span></h2></div><button id="hero-room" class="courtyard-link" type="button">Explore the courtyard ↓</button></div>
+        <div class="hotel-layout">
+          <section class="hotel-panel" aria-label="Shared hotel room">
+            <div class="room-topline"><span><i class="room-dot"></i> LOUNGE & POOL</span><span id="room-caption">Your little corner of the internet.</span></div>
+            <div class="party-banner" id="party-banner" hidden><span class="party-banner-icon" aria-hidden="true">✳</span><div><strong>Pool party!</strong><span id="party-host">The pool lights are on.</span></div><span id="party-countdown" aria-label="Time remaining">60s</span></div>
+            <div class="canvas-wrap"><canvas id="hotel-canvas" tabindex="0" aria-label="Isometric motel. Click or tap the floor to walk, click a seat to sit, or focus here and use arrow keys or W A S D to move. Numbered pins mark clues for Room 003; the clue buttons above the courtyard also take you there." aria-describedby="movement-hint"></canvas><div class="scene-label"><span>THREE DOLLAR MOTEL</span><small>Est. on the internet</small></div><div id="reconnect-banner" class="reconnect-banner" hidden>Reconnecting to the hotel…</div></div>
+            <div class="room-toolbar"><span id="movement-hint"><kbd>↗</kbd> Click to walk <span class="hint-divider">·</span> Click a seat to sit</span><button type="button" id="stand-button" class="small-button" disabled>Stand up</button><div class="reactions" aria-label="Send a reaction"><button type="button" data-emote="wave" aria-label="Wave" title="Wave" disabled>👋</button><button type="button" data-emote="heart" aria-label="Send a heart" title="Heart" disabled>♥</button><button type="button" data-emote="laugh" aria-label="Laugh" title="Laugh" disabled>☺</button><button type="button" data-emote="splash" aria-label="Splash" title="Splash in the pool" disabled>💧</button></div></div>
+          </section>
+          <aside class="social-panel" aria-label="Community chat and guests">
+            <div class="social-top"><span class="eyebrow">PULL UP A CHAIR</span><strong>The guest lounge</strong></div>
+            <div class="social-tabs" role="tablist" aria-label="Community"><button id="chat-tab" class="social-tab selected" role="tab" aria-selected="true" aria-controls="chat-panel" type="button">Lounge chat <span class="unread-dot" hidden></span></button><button id="guests-tab" class="social-tab" role="tab" aria-selected="false" aria-controls="guests-panel" tabindex="-1" type="button">Guests <span id="guest-tab-count">0</span></button></div>
+            <section id="chat-panel" class="chat-panel" role="tabpanel" aria-labelledby="chat-tab"><div class="chat-welcome"><span class="tiny-key" aria-hidden="true">⚿</span><div><strong>Welcome to the motel.</strong><p>Keep it kind. Keep your seed phrase to yourself.</p></div></div><div id="chat-messages" class="chat-messages" role="log" aria-label="Lounge messages" aria-live="polite" aria-relevant="additions"><p class="empty-chat" id="empty-chat">A good conversation starts with hello.</p></div><form id="chat-form" class="chat-form"><label class="sr-only" for="chat-input">Message the lounge</label><div class="chat-input-wrap"><input id="chat-input" name="message" placeholder="Say something nice…" maxlength="280" autocomplete="off" disabled><button type="submit" aria-label="Send message" id="send-button" disabled>↑</button></div><p id="chat-hint">Check in to join the conversation.</p></form></section>
+            <section id="guests-panel" class="guests-panel" role="tabpanel" aria-labelledby="guests-tab" hidden><p class="guests-note">A small place is better with company.</p><div id="guest-list"></div><p class="guests-empty" id="guests-empty">Guests will appear here after you check in.</p></section>
+          </aside>
+        </div>
+        <section class="community-card" aria-labelledby="daily-prompt-label">
+          <div class="community-icon" aria-hidden="true">✳</div>
+          <div class="community-copy"><span class="eyebrow" id="daily-prompt-label">TODAY’S POOLSIDE QUESTION</span><p id="daily-prompt">What wildly unnecessary amenity does this motel need?</p><span class="community-note">A little icebreaker for whoever checks in today.</span></div>
+          <div class="community-actions"><button id="answer-prompt" class="small-button" type="button">Answer in chat ↗</button><button id="invite-friend" class="outline-button" type="button">Invite a friend</button></div>
+        </section>
+        <div class="bottom-row"><div class="notice-card"><span aria-hidden="true">✳</span><div><strong id="notice-title">A home for the community. A coin to come.</strong><p id="notice-copy">The hotel is open for testing. Our token has not launched.</p></div><button id="reception-button" type="button" aria-label="Read the reception notice">↗</button></div><div class="self-card"><span class="self-avatar" id="self-avatar" aria-hidden="true">?</span><div><strong id="self-name">Room for one more?</strong><span id="self-status">Check in below.</span></div><button type="button" id="leave-button" class="text-button" hidden>Check out</button><button type="button" id="open-checkin" class="small-button">Check in ↗</button></div></div>
+        <footer><span>THREE DOLLAR MOTEL <span>✳</span> No dress code. Some house rules.</span><button class="text-button" id="mobile-help" type="button">House rules</button><button class="text-button host-entry" type="button">Host controls</button></footer>
+      </main>
+    </div>
+  </div>
+  <dialog id="checkin-dialog" class="checkin-dialog" aria-labelledby="checkin-title"><div class="checkin-art" aria-hidden="true"><img class="checkin-sign" src="/motel-sign.png" alt="" width="1254" height="1254"><span class="art-caption">BIG MEMES. TINY MOTEL.<br>YOUR ROOM IS THE INTERNET.</span></div><div class="checkin-content"><button type="button" class="dialog-close" id="browse-button" aria-label="Close check-in and look around">×</button><span class="eyebrow">WELCOME, INTERNET STRANGER</span><h2 id="checkin-title">Check in.<br><em>Chill out.</em></h2><p>A little poolside company, one browser tab away.</p><form id="checkin-form"><label for="nickname">What should we call you?</label><input id="nickname" name="nickname" placeholder="Your nickname" minlength="2" maxlength="20" required autocomplete="nickname" spellcheck="false"><fieldset><legend>Pick your holiday outfit</legend><div id="color-picker" class="color-picker"></div></fieldset><p class="form-error" id="checkin-error" role="alert"></p><button class="primary-button" type="submit" id="join-button">Check in <span>↗</span></button></form><span class="checkin-footnote">Free guest entry. No wallet needed.</span></div></dialog>
+  <dialog id="invite-dialog" class="info-dialog" aria-labelledby="invite-title"><button class="dialog-close" data-close-dialog type="button" aria-label="Close">×</button><span class="eyebrow">SAVE SOMEONE A SEAT</span><h2 id="invite-title">Better with<br><em>company.</em></h2><p>Send a friend the motel link and pick a time to meet. Guest entry is free, with no wallet needed.</p><label for="invite-link">Motel link</label><input id="invite-link" class="invite-link" type="text" readonly><p class="fine-print">Select and copy the link above to share it.</p></dialog>
+  <dialog id="coin-dialog" class="info-dialog" aria-labelledby="coin-title"><button class="dialog-close" data-close-dialog type="button" aria-label="Close">×</button><span class="eyebrow">A NOTE FROM RECEPTION</span><h2 id="coin-title">Big memes.<br><em>Tiny motel.</em></h2><p id="coin-description">The hotel is being tested before our coin launches. There is no official token address yet.</p><div id="coin-details" hidden><label for="coin-address">Official token address</label><code id="coin-address" tabindex="0"></code><button id="copy-address" class="small-button" type="button">Copy address</button><a id="trade-link" class="primary-button" target="_blank" rel="noopener noreferrer">View coin on Pump.fun ↗</a></div><p class="fine-print" id="coin-disclaimer">A live hotel is not a promise of token returns. Any future meme coin could lose all its value.</p></dialog>
+  <dialog id="help-dialog" class="info-dialog" aria-labelledby="help-title"><button class="dialog-close" data-close-dialog type="button" aria-label="Close">×</button><span class="eyebrow">THE VERY SHORT HOUSE RULES</span><h2 id="help-title">Make yourself<br><em>at home.</em></h2><ul class="rules"><li>Tap the floor to walk. Tap a nearby seat to sit. Arrow keys or W A S D work while the hotel has focus.</li><li>Investigate Room 003 using the three clue buttons or numbered pins. Solve it for a passport stamp and demo credits for a shared pool party.</li><li>Use lounge chat and reactions to say hello. Click a guest to mute their messages on your screen.</li><li>Be kind. No harassment, impersonation, spam or unsolicited promotions.</li><li>Keep private information and wallet recovery phrases out of chat. Hosts can mute or remove disruptive guests.</li></ul><p class="fine-print">Guest profiles and chat are temporary and reset when this server restarts. Your mystery progress is saved for this browser; clearing cookies loses access. Demo credits have no monetary value, cash-out or token conversion. This is a public room; other guests can read what you post.</p></dialog>
+  <dialog id="host-dialog" class="info-dialog" aria-labelledby="host-title"><button class="dialog-close" data-close-dialog type="button" aria-label="Close">×</button><span class="eyebrow">BEHIND THE FRONT DESK</span><h2 id="host-title">Host check-in.</h2><form id="host-form"><label for="host-key">Host key</label><input id="host-key" name="host-key" type="password" autocomplete="off" required><p class="form-error" id="host-error" role="alert"></p><button class="primary-button" id="host-submit" type="submit">Unlock host controls ↗</button></form><p class="fine-print" id="host-note">After unlocking, select a guest to mute, kick or temporarily ban them.</p></dialog>
+  <dialog id="guest-dialog" class="info-dialog guest-dialog" aria-labelledby="guest-title"><button class="dialog-close" data-close-dialog type="button" aria-label="Close">×</button><span class="eyebrow">FELLOW MOTEL GUEST</span><h2 id="guest-title">Guest</h2><button id="local-mute" class="outline-button" type="button">Mute on my screen</button><p class="fine-print">This hides their chat and speech bubbles for you.</p><div id="host-actions" hidden><hr><p class="eyebrow">HOST CONTROLS</p><div class="moderation-actions"><button data-moderate="mute" type="button" class="outline-button">Mute for 5 minutes</button><button data-moderate="unmute" type="button" class="outline-button">Unmute</button><button data-moderate="kick" type="button" class="outline-button">Kick</button><button data-moderate="ban" type="button" class="danger-button">Ban for 30 minutes</button></div><p class="fine-print">Guest bans are temporary and reset if the server restarts.</p></div></dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div><noscript><div class="noscript">JavaScript is needed to join the live hotel. Please enable it and reload.</div></noscript>
+</body>
+</html>

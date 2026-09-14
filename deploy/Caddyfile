@@ -1,0 +1,11 @@
+{$MOTEL_DOMAIN} {
+	reverse_proxy motel:3000 {
+		# Caddy flushes text/event-stream responses immediately, without buffering.
+		# Keep stream_timeout unset: guest connections are long-lived.
+		transport http {
+			# No response read/write timeout; the app sends an SSE heartbeat every 10s.
+			read_timeout 0
+			write_timeout 0
+		}
+	}
+}

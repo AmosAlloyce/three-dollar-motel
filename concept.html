@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4efdf">
+  <meta name="description" content="Three Dollar Motel: a working concept for a hotel-themed meme coin and a shared virtual hangout. Not launched.">
+  <title>Three Dollar Motel — Concept preview</title>
+  <style>
+    :root { color-scheme: light; --paper:#f4efdf; --ink:#243a31; --muted:#637165; --orange:#b74a2b; --line:#cdd1bf; --pool:#9acbba; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; background:var(--paper); color:var(--ink); font-family:Arial,Helvetica,sans-serif; }
+    a { color:inherit; }
+    button { font:inherit; }
+    .wrap { width:min(1120px,calc(100% - 48px)); margin:auto; }
+    .notice { padding:10px 24px; background:var(--ink); color:var(--paper); text-align:center; font-size:11px; letter-spacing:.12em; text-transform:uppercase; }
+    header { display:flex; align-items:center; justify-content:space-between; gap:20px; padding:26px 0; border-bottom:1px solid var(--line); }
+    .brand { font-size:13px; font-weight:800; letter-spacing:.1em; text-decoration:none; }
+    .brand span { color:var(--orange); margin-right:10px; }
+    .header-note { font-size:11px; color:var(--muted); }
+    .hero { display:grid; grid-template-columns:1fr 1.05fr; gap:38px; align-items:center; padding:70px 0 54px; }
+    .eyebrow { color:var(--orange); font-size:11px; font-weight:700; letter-spacing:.16em; text-transform:uppercase; }
+    h1 { font-family:Georgia,'Times New Roman',serif; font-weight:400; font-size:clamp(60px,6.7vw,88px); line-height:.96; letter-spacing:-.055em; margin:24px 0; }
+    h1 em { color:var(--orange); font-weight:400; }
+    .intro { max-width:385px; font-size:16px; color:var(--muted); line-height:1.7; }
+    .cta { display:inline-flex; gap:25px; margin-top:20px; padding:17px 24px; border-radius:4px; background:var(--ink); color:var(--paper); text-decoration:none; font-size:13px; }
+    .status { margin-top:19px; font-size:11px; color:var(--muted); line-height:1.6; }
+    .postcard { margin:0; background:#e6e5cd; border:1px solid #c5ccb6; border-radius:50% 50% 8px 8px; overflow:hidden; transform:rotate(2deg); }
+    .postcard svg { display:block; width:100%; height:auto; }
+    figcaption { padding:15px 20px; font-size:10px; letter-spacing:.13em; text-align:center; text-transform:uppercase; background:#ebe8d5; border-top:1px solid #ccd1bd; }
+    .ribbon { display:flex; justify-content:space-between; flex-wrap:wrap; gap:14px; padding:22px 0; border-block:1px solid var(--line); font-size:11px; letter-spacing:.08em; text-transform:uppercase; }
+    .ribbon span::before { content:'✳'; color:var(--orange); margin-right:9px; }
+    #concept { padding:55px 0; }
+    .section-top { display:flex; align-items:baseline; justify-content:space-between; gap:20px; margin-bottom:25px; }
+    h2 { font-family:Georgia,'Times New Roman',serif; font-size:36px; font-weight:400; letter-spacing:-.03em; margin:0; }
+    .small { font-size:12px; color:var(--muted); }
+    .room-controls { display:flex; flex-wrap:wrap; gap:10px; margin-bottom:18px; }
+    .room-controls button { cursor:pointer; padding:12px 20px; border:1px solid var(--line); border-radius:3px; color:var(--ink); background:transparent; font-size:13px; }
+    .room-controls button[aria-pressed="true"] { background:var(--ink); color:var(--paper); border-color:var(--ink); }
+    a:focus-visible,button:focus-visible { outline:3px solid var(--orange); outline-offset:5px; }
+    .room { display:grid; grid-template-columns:90px 1fr; gap:24px; padding:30px; border:1px solid var(--line); border-radius:5px; background:#efead9; }
+    .room-number { font-family:Georgia,'Times New Roman',serif; font-size:56px; color:var(--orange); line-height:1; }
+    h3 { font-family:Georgia,'Times New Roman',serif; font-size:26px; font-weight:400; margin:0 0 10px; }
+    .room p { max-width:650px; color:var(--muted); font-size:14px; line-height:1.7; margin:0; }
+    .room-label { display:inline-block; margin-top:16px; border:1px solid #c7cdbd; border-radius:20px; padding:6px 10px; font-size:10px; text-transform:uppercase; letter-spacing:.07em; }
+    [hidden] { display:none !important; }
+    footer { display:flex; justify-content:space-between; gap:25px; padding:25px 0 35px; border-top:1px solid var(--line); color:var(--muted); font-size:11px; line-height:1.7; }
+    footer p { margin:0; max-width:650px; }
+    @media(max-width:720px) { .wrap { width:calc(100% - 36px); } .hero { grid-template-columns:1fr; gap:40px; padding:42px 0 35px; } h1 { font-size:72px; } .postcard { max-width:460px; width:100%; margin:0 auto 12px; } .section-top,footer { flex-direction:column; align-items:flex-start; } .room { grid-template-columns:42px 1fr; gap:16px; padding:22px 18px; } .room-number { font-size:36px; } .header-note { max-width:100px; text-align:right; } }
+    @media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }
+  </style>
+</head>
+<body>
+  <div class="notice">Concept preview · Coin and live lounge not launched</div>
+  <div class="wrap">
+    <header>
+      <a class="brand" href="#"><span>✳</span>THREE DOLLAR MOTEL</a>
+      <span class="header-note">A very modest beginning.</span>
+    </header>
+    <main>
+      <section class="hero" aria-labelledby="headline">
+        <div>
+          <div class="eyebrow">A meme coin with a place to meet</div>
+          <h1 id="headline">Big memes.<br><em>Tiny motel.</em></h1>
+          <p class="intro">A little hotel for a very online community. Bring your memes. We'll bring the questionable pool.</p>
+          <a class="cta" href="#concept">Explore the concept <span aria-hidden="true">↗</span></a>
+          <p class="status">Working name. No token address or official community yet.</p>
+        </div>
+        <figure class="postcard">
+          <svg viewBox="0 0 540 500" role="img" aria-labelledby="scene-title scene-desc">
+            <title id="scene-title">A postcard from the Three Dollar Motel</title>
+            <desc id="scene-desc">An original illustration of a small cream motel with orange doors, a turquoise pool, a palm tree and a roadside sign.</desc>
+            <rect width="540" height="500" fill="#e6e5cd"/>
+            <circle cx="407" cy="108" r="47" fill="#cf7b4d" opacity=".6"/>
+            <path d="M0 323 Q160 261 300 300 T540 298 V500 H0Z" fill="#b9c6a4"/>
+            <path d="M0 384 Q180 307 355 353 T540 353 V500 H0Z" fill="#d9d3b6"/>
+            <ellipse cx="268" cy="388" rx="191" ry="67" fill="#8d9b78" opacity=".2"/>
+            <path d="M121 226 L344 171 L443 225 L217 284Z" fill="#c36c48"/>
+            <path d="M121 226 L217 279 V367 L121 310Z" fill="#c5b38c"/>
+            <path d="M217 279 L443 224 V309 L217 367Z" fill="#f5eaca"/>
+            <path d="M111 220 L343 161 L456 222 L221 284Z" fill="#a4472d"/>
+            <path d="M111 220 L221 281 V292 L111 233Z" fill="#874331"/>
+            <path d="M221 281 L456 222 V234 L221 292Z" fill="#b85a39"/>
+            <path d="M238 303 L271 295 V351 L238 359Z M306 285 L338 277 V334 L306 342Z M374 268 L406 260 V316 L374 324Z" fill="#ba623e"/>
+            <path d="M280 299 L296 295 V318 L280 322Z M347 282 L363 278 V301 L347 305Z M416 264 L431 260 V283 L416 287Z" fill="#526f60"/>
+            <path d="M134 249 L168 268 V301 L134 281Z" fill="#526f60"/>
+            <path d="M150 259 V291 M134 265 L168 284" stroke="#c5b38c" stroke-width="3"/>
+            <circle cx="261" cy="328" r="2" fill="#f4efdf"/>
+            <circle cx="328" cy="310" r="2" fill="#f4efdf"/>
+            <circle cx="396" cy="292" r="2" fill="#f4efdf"/>
+            <path d="M216 369 L445 311 L454 322 L221 383Z" fill="#b8ad91"/>
+            <ellipse cx="298" cy="416" rx="113" ry="41" fill="#f7f0d9"/>
+            <ellipse cx="298" cy="413" rx="100" ry="32" fill="#538d84"/>
+            <ellipse cx="298" cy="418" rx="96" ry="28" fill="#91c8b7"/>
+            <path d="M231 414 Q248 407 265 414 T298 414 M289 434 Q308 427 327 433 M337 403 Q349 398 363 403" fill="none" stroke="#d9ede0" stroke-width="3" stroke-linecap="round"/>
+            <ellipse cx="318" cy="408" rx="14" ry="7" fill="#cb6742"/>
+            <ellipse cx="318" cy="408" rx="7" ry="3" fill="#91c8b7"/>
+            <path d="M182 392 L182 159" stroke="#596a50" stroke-width="9"/>
+            <rect x="122" y="105" width="119" height="91" rx="9" fill="#f5eaca" stroke="#ad4d31" stroke-width="5"/>
+            <text x="181" y="137" text-anchor="middle" fill="#ad4d31" font-family="Georgia,serif" font-size="20">THREE</text>
+            <text x="181" y="159" text-anchor="middle" fill="#ad4d31" font-family="Georgia,serif" font-size="20">DOLLAR</text>
+            <text x="181" y="181" text-anchor="middle" fill="#314e3e" font-family="Arial,sans-serif" font-size="14" letter-spacing="4">MOTEL</text>
+            <path d="M74 370 Q94 272 80 201" stroke="#937854" stroke-width="13" fill="none"/>
+            <path d="M80 209 Q27 168 19 227 Q50 207 80 215 M80 209 Q50 143 99 159 Q80 181 80 209 M80 207 Q125 144 147 197 Q108 187 80 215 M80 211 Q133 206 131 250 Q110 221 80 218" fill="#506c47"/>
+            <path d="M417 383 L453 374 L470 384 L434 394Z" fill="#b54e31"/>
+            <path d="M421 391 V403 M459 381 V394" stroke="#657159" stroke-width="3"/>
+            <path d="M430 349 V385" stroke="#657159" stroke-width="3"/>
+            <path d="M394 356 Q425 312 464 342Z" fill="#f0e8cf"/>
+            <path d="M430 333 Q419 339 415 351 L442 347 Q438 337 430 333" fill="#c46542"/>
+            <path d="M350 111 l8 -5 8 5 M291 87 l8 -5 8 5" stroke="#7b8767" stroke-width="2" fill="none"/>
+          </svg>
+          <figcaption>Artist's impression · Actual towels not included</figcaption>
+        </figure>
+      </section>
+      <div class="ribbon" aria-label="The idea"><span>One tiny motel</span><span>A shared community</span><span>Unreasonably good memes</span></div>
+      <section id="concept" aria-labelledby="concept-title">
+        <div class="section-top"><h2 id="concept-title">Small place. Shared idea.</h2><span class="small">A look at the proposed first release.</span></div>
+        <div class="room-controls" aria-label="Explore the proposed spaces">
+          <button type="button" aria-pressed="true" aria-controls="lobby" data-room="lobby">01 / The lobby</button>
+          <button type="button" aria-pressed="false" aria-controls="pool" data-room="pool">02 / The pool</button>
+          <button type="button" aria-pressed="false" aria-controls="coin" data-room="coin">03 / The coin</button>
+        </div>
+        <div id="lobby" class="room"><div class="room-number" aria-hidden="true">01</div><div><h3>Somewhere to check in.</h3><p>The proposed clubhouse: choose a nickname, see who's around and chat with the community in one shared hotel scene. This page is a visual preview; live chat is not available yet.</p><span class="room-label">Proposed feature</span></div></div>
+        <div id="pool" class="room" hidden><div class="room-number" aria-hidden="true">02</div><div><h3>Poolside, eventually.</h3><p>A little pool beside the lounge gives the motel its character. A place for community meetups and a group photo if the clubhouse goes ahead. For now, it's part of the illustration.</p><span class="room-label">Concept artwork</span></div></div>
+        <div id="coin" class="room" hidden><div class="room-number" aria-hidden="true">03</div><div><h3>The guests make the story.</h3><p>A proposed hotel-themed meme coin. The name, ticker and launch details are still being decided. No token has been launched, and this preview accepts no payments or wallet connections.</p><span class="room-label">Not launched</span></div></div>
+        <noscript><p class="small">This is a static concept preview. The pool is artwork; the coin and live lounge have not launched.</p></noscript>
+      </section>
+    </main>
+    <footer><p>THREE DOLLAR MOTEL · Working concept</p><p>No token address, sale, earnings promise or launch date. Any future meme coin could lose all its value.</p></footer>
+  </div>
+  <script>
+    const roomButtons = document.querySelectorAll('[data-room]');
+    roomButtons.forEach(button => button.addEventListener('click', () => {
+      roomButtons.forEach(other => {
+        const selected = other === button;
+        other.setAttribute('aria-pressed', String(selected));
+        document.getElementById(other.dataset.room).hidden = !selected;
+      });
+    }));
+  </script>
+</body>
+</html>

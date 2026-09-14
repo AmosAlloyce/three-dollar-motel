@@ -1,0 +1,29 @@
+.env
+.env.*
+!.env.example
+
+# Local credentials
+hostpass.txt
+ssh-key-*
+
+# Runtime and generated data
+node_modules/
+*.log
+.DS_Store
+playwright-report/
+test-results/
+data/
+backups/
+output/
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
+
+# Private planning notes and local tool state
+LAUNCH.md
+PRELAUNCH.md
+.agents/
+.codex/
+
+# Editor files
+.vscode/
